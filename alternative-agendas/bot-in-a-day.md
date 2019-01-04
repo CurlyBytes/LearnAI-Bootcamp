@@ -54,6 +54,9 @@ Please note: This is a rough agenda, and the schedule is subject to change pendi
 ## Supplementary materials
 Please refer to the main [README](../README.md) that has all of the materials for the two-day bootcamp.
 
+The LearnAI team has provided some extra labs you may be interested in:
+- [Lab 2.5: Log Chat Conversations in your Bot](./lab02.5-logging_chat_conversations/0_README.md)
+- [Lab 2.6: Testing your Bot](./lab02.6-testing_bots/0_README.md)
 
 ## Related courses
 Here are some related courses from the LearnAI team:
