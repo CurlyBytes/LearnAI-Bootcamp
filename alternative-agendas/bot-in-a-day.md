@@ -63,6 +63,6 @@ Here are some related courses from the LearnAI team:
 
 [lab-cogsrvc-341]: https://github.com/InsightDI/LearnAI-Bootcamp/blob/master/lab01.5-luis/0_README.md
 [lab-azsearch-301]: https://github.com/InsightDI/LearnAI-Bootcamp/blob/master/lab02.1-azure_search/0_README.md
-[lab-intelbot-301]: https://github.com/InsightDI/LearnAI-Bootcamp/blob/master/lab02.2-building_bots/0_README.md
+[lab-intelbot-301]: https://github.com/InsightDI/LearnAI-Bootcamp/blob/master/lab02.2-building_bots/0_README_BIAD.md
 
 
