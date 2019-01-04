@@ -52,7 +52,7 @@ Navigate to the solution file for the Web App Bot you just created, and open it 
 
 Most of the time, you will use the template that you have downloaded as a base that you will modify to meet your needs, modifying the project name and the other existing files to be more descriptive of your solution. For the purposes of this lab, we will use an existing project that has all of the files named correctly. 
 
-If you have cloned this Github repo already, you will find Find the project we'll use in the folder /lab02.2-building_bots/resources/code/FinishedPictureBot-Part0. If you are using Github on the web, you can download the folder at https://github.com/InsightDI/LearnAI-Bootcamp/tree/master/lab02.2-building_bots/resources/code/FinishedPictureBot-Part0.  
+If you have cloned this Github repo already, you will find Find the project we'll use in the folder \lab02.2-building_bots\resources\code\FinishedPictureBot-Part0. If you are using Github on the web, you can download the folder at https://github.com/InsightDI/LearnAI-Bootcamp/tree/master/lab02.2-building_bots/resources/code/FinishedPictureBot-Part0.  
 
 Start by right-clicking on the Solution and selecting "Build". This will load up the packages. Next, in the "appsettings.json file, update it to include the following, adding your bot service information as well:
 ```json
