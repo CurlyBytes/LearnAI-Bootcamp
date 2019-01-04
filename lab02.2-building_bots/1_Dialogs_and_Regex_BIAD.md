@@ -62,70 +62,8 @@ Start by right-clicking on the Solution and selecting "Build". This will load up
 }
 ``` 
 
-Next, we'll focus on the NuGet packages we need. Right-click on the solution in Solution Explorer and select "Manage NuGet Packages for Solution."  
-
-
-**Do not update Microsoft.AspNetCore.All or Microsoft.AspNetCore**.  
-
-
-In the "Installed" tab, update the following packages **in order** to `4.1.5` (this may already be done):
-* Microsoft.Bot.Configuration
-* Microsoft.Bot.Schema
-* Microsoft.Bot.Connector
-* Microsoft.Bot.Builder
-* Microsoft.Bot.Builder.Integration.AspNet.Core
-
-**Do not update Microsoft.AspNetCore.All or Microsoft.AspNetCore**.   
-
-Next, click the "Browse" tab, and install all of the packages listed below. Make sure you check the box "Include prerelease" and are on the "Browse" tab:  
-* Microsoft.Bot.Builder.Azure
-* Microsoft.Bot.Builder.AI.Luis
-* Microsoft.Bot.Builder.Dialogs
-* Microsoft.Azure.Search
-
-Finally, in the solution explorer, navigate to **Dependencies > NuGet** and remove the following packages:  
-* [AsyncUsageAnalyzers](https://www.nuget.org/packages/AsyncUsageAnalyzers/)
-* [StyleCop.Analyzers](https://www.nuget.org/packages/StyleCop.Analyzers)
-
-You can also remove "EchoBotWithCounter.ruleset" from the root project directory, as that's what the packages are used to create. These can be useful packages for production bots that make sure you've standardized your coding and commenting style. Exploring them is beyond the scope of this workshop, but you can learn more about them at the links provided above.  
-
-After you've installed them, under **Dependencies > NuGet** in your Solution Explorer, you should see the following packages:  
- 
-* Microsoft.AspNetCore
-* Microsoft.AspNetCore.All
-* Microsoft.Azure.Search
-* Microsoft.Bot.Builder
-* Microsoft.Bot.Builder.AI.Luis 
-* Microsoft.Bot.Builder.Azure 
-* Microsoft.Bot.Builder.Dialogs  
-* Microsoft.Bot.Builder.Integration.AspNet.Core
-* Microsoft.Bot.Configuration
-* Microsoft.Bot.Connector
-* Microsoft.Bot.Schema
-* Microsoft.Extensions.Logging.AzureAppServices
-
-
-
-As you probably know, renaming a Visual Studio Solution/Project is a very sensitive task. **Carefully** complete the following tasks so all the names reflect PictureBot instead of EchoBot:
-> Note: Renaming files in Visual Studio can take up to 15 seconds while all the references are being resolved. If time is not given for this to occur, the build will fail which may require you to manually resolve the refactored objects. Have patience.
-1. Rename the solution then project from "EchoBotWithCounter" to "PictureBot". Close and reopen Visual Studio.
-2. Open Program.cs, highlight "BotBuilderSamples" and right-click to select "Rename". Check the boxes to rename all occurrences in strings and comments. Rename it to PictureBot and select "Apply".
-3. Open Properties > launchSettings.json and replace "EchoBotWithCounter" to "PictureBot".
-4. Open wwwroot > default.htm, and replace the occurrences of "Echo bot with counter sample" and "Echo with Counter Bot" with "PictureBot".
-5. Rename "CounterState.cs" to "PictureState.cs".
-> Note: Do this by right-clicking on the file and selecting "Rename". You'll get a pop-up similar to the image below. Select "Yes". **Do this for every file you're asked to rename.**
-![Rename File](./resources/assets/rename.png)
-6. Open "PictureState.cs" and confirm the class is called "PictureState". If it is not, highlight "CounterState" and right-click to select "Rename". Check the boxes to rename all occurrences in strings and comments. Rename it to PictureState and select "Apply".
-7. Rename "EchoBotAccessors.cs" to "PictureBotAccessors.cs"
-8. Rename "EchoWithCounterBot.cs" to "PictureBot.cs"
-9. Rename "EchoBotWithCounter.deps.json" to "PictureBot.deps.json"
-10. "EchoBotWithCounter.runtimeconfig.json" to "PictureBot.runtimeconfig.json"
-11. Build the solution.
-
->**TIP**:  If you only have one monitor and you would like to easily switch between instructions and Visual Studio, you can now add the instruction files to your Visual Studio solution by right-clicking on the project in Solution Explorer and selecting **Add > Existing Item**. Navigate to "lab02.2-bulding_bots," and add all the files of type "MD File." 
-
 #### Creating a Hello World bot
-So now that we've updated our base shell to support the naming and NuGet packages we'll use throughout the rest of the labs, we're ready to start adding some custom code. First, we'll just create a simple "Hello world" bot that helps you get warmed up to building bots with the V4 SDK.
+We're ready to start adding some custom code. First, we'll just create a simple "Hello world" bot that helps you get warmed up to building bots with the V4 SDK.
 
 ---  
 
