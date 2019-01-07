@@ -50,6 +50,9 @@ Please note: This is a rough agenda, and the schedule is subject to change pendi
 - 2:30-4: [Lab 2.3: Enhancing Applications with Bing Search](https://github.com/InsightDI/LearnAI-Bootcamp/blob/master/lab02.3-bing_search/0_README.md)
 - 4:30-5: Q&A and Feedback for Bot In A Day
  
+## PowerPoint Slides
+
+Download the [Powerpoint slides here](../presentations/BIAD%20v2%20Deck.pptx). 
 
 ## Supplementary materials
 Please refer to the main [README](../README.md) that has all of the materials for the two-day bootcamp.
