@@ -604,4 +604,4 @@ Get stuck? You can find the solution for this lab under **resources > code**. We
 
 
 ### Continue to [2_Azure_Search](./2_Azure_Search.md)  
-Back to [README](./0_README.md)
+Back to [README](./0_README_BIAD.md)
