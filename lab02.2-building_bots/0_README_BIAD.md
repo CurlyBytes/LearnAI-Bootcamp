@@ -92,6 +92,6 @@ This workshop has been broken down into five sections:
 
 
 
-### Continue to [1_Dialogs_and_Regex](./1_Dialogs_and_Regex.md)
+### Continue to [1_Dialogs_and_Regex](./1_Dialogs_and_Regex_BIAD.md)
 
 
