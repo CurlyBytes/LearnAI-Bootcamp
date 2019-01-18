@@ -44,7 +44,7 @@ Within the Azure Search blade you just created, click **Import Data->Data Source
 
 Once you click this, choose a name for the Cosmos DB data source. Select "Or input a connection string" and use this value: 
 ```
-Insert Cosmos key here on day-of-session
+AccountEndpoint=https://biad-shared.documents.azure.com:443/;AccountKey=JrkeUAThuGCEC3H6Z0gH2Z9iReWzgl4gEw91E5nz3mrTs7R36yx4Sn76llFj9JZvGJnA4ZbhD9YWLv2FmygHCw==;
 ```
 
 For both, the Database should be "images" and the Collection should be "metadata".
