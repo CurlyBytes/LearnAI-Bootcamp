@@ -159,6 +159,7 @@ You can see in the code below, the EchoBot template (the template we started fro
 
                 return accessors;
 ```
+#### IMPORTANT!!! Read this section 
 We won't count turns, but we can use a similar construct to keep track of what we'll call `PictureState`. Using the same naming conventions as `CounterState`, add `PictureState` within the list of custom state accessors.
 
 Finally, to keep track of the dialogs, you'll use the built-in `DialogState`, by adding the following line to your list of custom state accessors:
