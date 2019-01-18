@@ -50,10 +50,6 @@ While you've got the Azure portal open, now is also a good time to find and save
 
 Navigate to the solution file for the Web App Bot you just created, and open it in Visual Studio 2017 or Visual Studio Code. Spend some time looking at all of the different things you get built in from the Echo Bot template. We won't spend time explaining every single file, but we **highly recommend** spending some time **later** working through and reviewing this sample (and the other Web App Bot sample - Basic Bot), if you have not already. It contains important and useful shells needed for bot development. You can find it and other useful shells and samples [here](https://github.com/Microsoft/BotBuilder-Samples).
 
-Most of the time, you will use the template that you have downloaded as a base that you will modify to meet your needs, modifying the project name and the other existing files to be more descriptive of your solution. For the purposes of this lab, we will use an existing project that has all of the files named correctly. 
-
-If you have cloned this Github repo already, you will find Find the project we'll use in the folder \lab02.2-building_bots\resources\code\FinishedPictureBot-Part0. If you are using Github on the web, you can download the folder at https://github.com/InsightDI/LearnAI-Bootcamp/tree/master/lab02.2-building_bots/resources/code/FinishedPictureBot-Part0.  
-
 Start by right-clicking on the Solution and selecting "Build". This will load up the packages. Next, in the "appsettings.json file, update it to include the following, adding your bot service information as well:
 ```json
 {
@@ -63,42 +59,13 @@ Start by right-clicking on the Solution and selecting "Build". This will load up
 ``` 
 
 #### Creating a Hello World bot
-We're ready to start adding some custom code. First, we'll just create a simple "Hello world" bot that helps you get warmed up to building bots with the V4 SDK.
+Most of the time, you will use the template that you have downloaded as a base that you will modify to meet your needs, modifying the project name and the other existing files to be more descriptive of your solution. For the purposes of this lab, we will use an existing project that has all of the files named correctly. 
 
----  
+If you have cloned this Github repo already, you will find Find the project we'll use in the folder \lab02.2-building_bots\resources\code\FinishedPictureBot-Part0. If you are using Github on the web, you can download the folder at https://github.com/InsightDI/LearnAI-Bootcamp/tree/master/lab02.2-building_bots/resources/code/FinishedPictureBot-Part0.  
+
+The code that you're working with has already been updated to include the Hello World functionality. 
 
 
-For the purposes of this section of the lab, navigate to the ConfigureServices method in Startup.cs and comment out (using `//`) the line `CounterState = conversationState.CreateProperty<CounterState>(PictureBotAccessors.CounterStateName),`. We'll talk about state and accessors in future sections.
-
-The only other file we need to update to get "Hello world" working is "PictureBot.cs". Open the file and review the comments.  
-
-Once you feel semi-comfortable with the code/comments, replace the `OnTurnAsync` method with the code below. This method is called every turn of the conversation. You'll see later why that fact is important, but for now, remember that OnTurnAsync is called on every turn.
-> Aside: A "turn" is used to describe a message to a user and a response from the bot. For example, if I say "Hello bot" and the bot responds "Hi, how are you?" that is **one** turn.
-```csharp
-        /// <summary>
-        /// Every conversation turn for our PictureBot will call this method.
-        /// There are no dialogs used, since it's "single turn" processing, meaning a single
-        /// request and response. Later, when we add Dialogs, we'll have to navigate through this method.
-        /// </summary>
-        /// <param name="turnContext">A <see cref="ITurnContext"/> containing all the data needed
-        /// for processing this conversation turn. </param>
-        /// <param name="cancellationToken">(Optional) A <see cref="CancellationToken"/> that can be used by other objects
-        /// or threads to receive notice of cancellation.</param>
-        /// <returns>A <see cref="Task"/> that represents the work queued to execute.</returns>
-        /// <seealso cref="BotStateSet"/>
-        /// <seealso cref="ConversationState"/>
-        /// <seealso cref="IMiddleware"/>
-        public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // If the user sends us a message
-            if (turnContext.Activity.Type is "message")
-            {
-                {
-                    await turnContext.SendActivityAsync($"Hello world.");
-                }
-            }
-        }
-```
 Now start your bot (with or without debugging) by pressing the button that looks like a play button, it should say "PictureBot" (or by hitting F5 on your keyboard). NuGet should take care of downloading the appropriate dependencies. You may hit some break points, **remove them** and select "Continue" (by the play button).  
 
 A few things to note:
