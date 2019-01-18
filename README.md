@@ -51,7 +51,7 @@ Please note: This is a rough agenda, and the schedule is subject to change pendi
  
 ## PowerPoint Slides
 
-Download the [Powerpoint slides here](../presentations/). 
+Download the [Powerpoint slides here](./presentations/). 
 
 ## Supplementary materials
 Please refer to the main [README](../README.md) that has all of the materials for the two-day bootcamp.
