@@ -109,7 +109,7 @@ We are now ready to train our model.  Click "Train" in the top right bar.  This 
 
 Next, click on "Manage" in the top bar. You'll have several options on the left side of the window (Application Information, Keys and Endpoints, Publish Settings, Versions, Collaborators). You can read more about the various publish options [here](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/PublishApp).
 
-If you completed the optional step of creating a LUIS service in the portal, select or add (by clicking the "Add Key" button towards the bottom of the page on the "Keys and Endpoints" tab) the endpoint key that you set up earlier, or follow the link to add a key from your Azure account 
+If you completed the optional step of creating a LUIS service in the portal, select or add (by clicking the "Assign Resource" button towards the bottom of the page on the "Keys and Endpoints" tab) the endpoint key that you set up earlier, or follow the link to add a key from your Azure account 
 (for testing and learning purposes, you can also just use the "Starter_Key", which is why creating the LUIS service was optional). You can leave the endpoint slot as "Production".  Then click "Publish" in the top bar. You'll have the option to publish to your "Production" or "Staging" endpoint. Select "Production", and [read about the reasons for the two endpoints](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-version). Finally, click "Publish".  
 
 
