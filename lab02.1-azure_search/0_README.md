@@ -43,11 +43,4 @@ There are several directories in the [resources](./resources) folder:
 
 - **assets**: This contains all of the images for the lab manual. You can ignore this folder.
 
-<<<<<<< HEAD
-
-### Continue to [1_AzureSearch](./1_AzureSearch_BIAD.md)
-
-
-=======
 ### Continue to [1_AzureSearch](./1_AzureSearch.md)
->>>>>>> pr/1

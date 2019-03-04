@@ -46,10 +46,10 @@ Please note: This is a rough agenda, and the schedule is subject to change pendi
 
 - 8-9 (optional): Setup assistance
 - 9-10: Introduction and Context for the Course
-- 10-11: [Lab 1.5: Developing Intelligent Applications with LUIS][lab-cogsrvc-341]
-- 11-12: [Lab 2.1: Developing Intelligent Applications with Azure Search][lab-azsearch-301]
+- 10-11: [Lab 1.5: Developing Intelligent Applications with LUIS](./lab01.5-luis/0_README.md)
+- 11-12: [Lab 2.1: Developing Intelligent Applications with Azure Search](./lab02.1-azure_search/0_README.md)
 - 12-1: Lunch
-- 1-2:30: [Lab 2.2: Building Intelligent Bots][lab-intelbot-301]
+- 1-2:30: [Lab 2.2: Building Intelligent Bots](./lab02.2-building_bots/0_README.md)
 - 2:30-4: [Lab 2.3: Enhancing Applications with Bing Search](https://github.com/InsightDI/LearnAI-Bootcamp/blob/master/lab02.3-bing_search/0_README.md)
 - 4:30-5: Q&A and Feedback for Bot In A Day
  

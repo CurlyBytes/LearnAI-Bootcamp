@@ -50,8 +50,6 @@ While you've got the Azure portal open, now is also a good time to find and save
 
 Navigate to the solution file for the Web App Bot you just created, and open it in Visual Studio (in future bots, you can use Visual Studio Code, but for the purposes of these labs, you should use Visual Studio). Spend some time looking at all of the different things you get built in from the Echo Bot template. We won't spend time explaining every single file, but we **highly recommend** spending some time **later** working through and reviewing this sample (and the other Web App Bot sample - Basic Bot), if you have not already. It contains important and useful shells needed for bot development. You can find it and other useful shells and samples [here](https://github.com/Microsoft/BotBuilder-Samples).
 
-For the purposes of this lab, we will modify aspects of the template to fit our needs, which is what you would likely do in the real world as well.
-
 Start by right-clicking on the Solution and selecting "Build". This will load up the packages. Next, in the "appsettings.json file, update it to include the following, adding your bot service information as well:
 
 ```json
@@ -61,114 +59,14 @@ Start by right-clicking on the Solution and selecting "Build". This will load up
 }
 ```
 
-Next, we'll focus on the NuGet packages we need. Right-click on the solution in Solution Explorer and select "Manage NuGet Packages for Solution."  
-
-#### Do not update Microsoft.AspNetCore.All or Microsoft.AspNetCore - Start
-
-In the "Installed" tab, update the following packages **in order** to `4.1.5` (this may already be done):
-
-* Microsoft.Bot.Configuration
-* Microsoft.Bot.Schema
-* Microsoft.Bot.Connector
-* Microsoft.Bot.Builder
-* Microsoft.Bot.Builder.Integration.AspNet.Core
-
-#### Do not update Microsoft.AspNetCore.All or Microsoft.AspNetCore - Finish
-
-Next, click the "Browse" tab, and install all of the packages listed below. Make sure you check the box "Include prerelease" and are on the "Browse" tab:
-
-* Microsoft.Bot.Builder.Azure
-* Microsoft.Bot.Builder.AI.Luis
-* Microsoft.Bot.Builder.Dialogs
-* Microsoft.Azure.Search
-
-Finally, in the solution explorer, navigate to **Dependencies > NuGet** and remove the following packages:  
-
-* [AsyncUsageAnalyzers](https://www.nuget.org/packages/AsyncUsageAnalyzers/)
-* [StyleCop.Analyzers](https://www.nuget.org/packages/StyleCop.Analyzers)
-
-You can also remove "EchoBotWithCounter.ruleset" from the root project directory, as that's what the packages are used to create. These can be useful packages for production bots that make sure you've standardized your coding and commenting style. Exploring them is beyond the scope of this workshop, but you can learn more about them at the links provided above.  
-
-After you've installed them, under **Dependencies > NuGet** in your Solution Explorer, you should see the following packages:  
-
-```c#
-* Microsoft.AspNetCore
-* Microsoft.AspNetCore.All
-* Microsoft.Azure.Search
-* Microsoft.Bot.Builder
-* Microsoft.Bot.Builder.AI.Luis
-* Microsoft.Bot.Builder.Azure
-* Microsoft.Bot.Builder.Dialogs  
-* Microsoft.Bot.Builder.Integration.AspNet.Core
-* Microsoft.Bot.Configuration
-* Microsoft.Bot.Connector
-* Microsoft.Bot.Schema
-* Microsoft.Extensions.Logging.AzureAppServices
-```
-
-As you probably know, renaming a Visual Studio Solution/Project is a very sensitive task. **Carefully** complete the following tasks so all the names reflect PictureBot instead of EchoBot:
-
-> Note: Renaming files in Visual Studio can take up to 15 seconds while all the references are being resolved. If time is not given for this to occur, the build will fail which may require you to manually resolve the refactored objects. Have patience.
-
-1. Rename the solution then project from "EchoBotWithCounter" to "PictureBot". Close and reopen Visual Studio.
-1. Open Program.cs, highlight "BotBuilderSamples" and right-click to select "Rename". Check the boxes to rename all occurrences in strings and comments. Rename it to PictureBot and select "Apply".
-1. Open Properties > launchSettings.json and replace "EchoBotWithCounter" to "PictureBot".
-1. Open wwwroot > default.htm, and replace the occurrences of "Echo bot with counter sample" and "Echo with Counter Bot" with "PictureBot".
-1. Rename "CounterState.cs" to "PictureState.cs"
-
-> Note: Do this by right-clicking on the file and selecting "Rename". You'll get a pop-up similar to the image below. Select "Yes". **Do this for every file you're asked to rename.**
-![Rename File](./resources/assets/rename.png)
-
-1. Open "PictureState.cs" and confirm the class is called "PictureState". If it is not, highlight "CounterState" and right-click to select "Rename". Check the boxes to rename all occurrences in strings and comments. Rename it to PictureState and select "Apply".
-1. Rename "EchoBotAccessors.cs" to "PictureBotAccessors.cs"
-1. Rename "EchoWithCounterBot.cs" to "PictureBot.cs"
-1. Rename "EchoBotWithCounter.deps.json" to "PictureBot.deps.json"
-1. "EchoBotWithCounter.runtimeconfig.json" to "PictureBot.runtimeconfig.json"
-1. Build the solution.
-
->**TIP**:  If you only have one monitor and you would like to easily switch between instructions and Visual Studio, you can now add the instruction files to your Visual Studio solution by right-clicking on the project in Solution Explorer and selecting **Add > Existing Item**. Navigate to "lab02.2-bulding_bots," and add all the files of type "MD File."
 
 #### Creating a Hello World bot
+Most of the time, you will use the template that you have downloaded as a base that you will modify to meet your needs, modifying the project name and the other existing files to be more descriptive of your solution. For the purposes of this lab, we will use an existing project that has all of the files named correctly. 
 
-So now that we've updated our base shell to support the naming and NuGet packages we'll use throughout the rest of the labs, we're ready to start adding some custom code. First, we'll just create a simple "Hello world" bot that helps you get warmed up to building bots with the V4 SDK.
+If you have cloned this Github repo already, you will find Find the project we'll use in the folder \lab02.2-building_bots\resources\code\FinishedPictureBot-Part0. If you are using Github on the web, you can download the folder at https://github.com/InsightDI/LearnAI-Bootcamp/tree/master/lab02.2-building_bots/resources/code/FinishedPictureBot-Part0.  
 
-An important concept is the "turn", used to describe a message to a user and a response from the bot.
-For example, if I say "Hello bot" and the bot responds "Hi, how are you?" that is **one** turn. Check in the image below how a **turn** goes trought the multiple layers of a bot application.
+The code that you're working with has already been updated to include the Hello World functionality. 
 
-![Bots Concepts](./resources/assets/bots-concepts-middleware.png)
-
-For the purposes of this section of the lab, navigate to the ConfigureServices method in Startup.cs and comment out (using `//`) the line `CounterState = conversationState.CreateProperty<CounterState>(PictureBotAccessors.CounterStateName),`. We'll talk about state and accessors in future sections.
-
-The only other file we need to update to get "Hello world" working is "PictureBot.cs". Open the file and review the comments.  
-
-Once you feel semi-comfortable with the code/comments, replace the `OnTurnAsync` method with the code below.
-This method is called every turn of the conversation. You'll see later why that fact is important, but for now, remember that OnTurnAsync is called on every turn.
-
-```csharp
-        /// <summary>
-        /// Every conversation turn for our PictureBot will call this method.
-        /// There are no dialogs used, since it's "single turn" processing, meaning a single
-        /// request and response. Later, when we add Dialogs, we'll have to navigate through this method.
-        /// </summary>
-        /// <param name="turnContext">A <see cref="ITurnContext"/> containing all the data needed
-        /// for processing this conversation turn. </param>
-        /// <param name="cancellationToken">(Optional) A <see cref="CancellationToken"/> that can be used by other objects
-        /// or threads to receive notice of cancellation.</param>
-        /// <returns>A <see cref="Task"/> that represents the work queued to execute.</returns>
-        /// <seealso cref="BotStateSet"/>
-        /// <seealso cref="ConversationState"/>
-        /// <seealso cref="IMiddleware"/>
-        public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // If the user sends us a message
-            if (turnContext.Activity.Type is "message")
-            {
-                {
-                    await turnContext.SendActivityAsync($"Hello world.");
-                }
-            }
-        }
-```
 
 Now start your bot (with or without debugging) by pressing the button that looks like a play button, it should say "PictureBot" (or by hitting F5 on your keyboard). NuGet should take care of downloading the appropriate dependencies. You may hit some break points, **remove them** and select "Continue" (by the play button).  
 
@@ -270,6 +168,7 @@ You can see in the code below, the EchoBot template (the template we started fro
 
                 return accessors;
 ```
+#### IMPORTANT!!! Read this section 
 
 We won't count turns, but we can use a similar construct to keep track of what we'll call `PictureState`. Using the same naming conventions as `CounterState`, add `PictureState` within the list of custom state accessors.
 
