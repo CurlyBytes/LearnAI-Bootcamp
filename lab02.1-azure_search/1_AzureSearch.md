@@ -41,13 +41,20 @@ For this lab, we will use the [Azure Search Indexer for Cosmos DB](https://docs.
 
 ![Import Wizard](./resources/assets/AzureSearch-ImportData.png)
 
-Within the Azure Search blade you just created, click **Import Data->Data Source->Cosmos DB**.  
+Within the Azure Search blade you just created, click **Import Data**. In the dropdown list, select **Cosmos DB**.
 
-Once you click this, choose a name for the Cosmos DB data source. Select "Or input a connection string" and use this value: 
+![Cosmos 1](./resources/assets/cosmos-1.png)
+
+The following screen will appear. Enter a name for the data source. Any name is fine. In the **Cosmos DB** account field, enter the following connection string. Then, select **images** as the database and **metadata** as the collection. 
+
 ```
-AccountEndpoint=https://biad-shared.documents.azure.com:443/;AccountKey=JrkeUAThuGCEC3H6Z0gH2Z9iReWzgl4gEw91E5nz3mrTs7R36yx4Sn76llFj9JZvGJnA4ZbhD9YWLv2FmygHCw==;
+AccountEndpoint=https://gab-ral-shareddb.documents.azure.com:443/;AccountKey=O6UNlM7n5LcLxU3hiVaMF0V04fsDEOk0uDuElh2xyIpAR2MVNpV20ro2T1p9ZRUuiFkdSlg32Xzn0PdJwz3GlA==;
 ```
-Click **OK** or **Next** twice to skip Cognitive Search. If you're like to look into Cognitive Search, we recommend [this bootcamp](https://aka.ms/kmb).  
+
+![Cosmos 2](./resources/assets/cosmos-2.png)
+
+
+Click **Next: Add cognitive search**, then click **Skip to: Customized target index**. If you're like to look into Cognitive Search, we recommend [this bootcamp](https://aka.ms/kmb).  
 
 At this point Azure Search will connect to your Cosmos DB container and analyze a few documents to identify a default schema for your Azure Search Index. After this is complete, you can set the properties for the fields as needed by your application (e.g. you can "Customize target index").  
 
