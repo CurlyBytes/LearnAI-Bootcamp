@@ -14,7 +14,7 @@ We will be developing a bot using the latest .NET SDK (v4).  To get started, we'
 
 #### Download the Bot Framework Emulator  
 
-You can download the v4 Preview Bot Framework Emulator for testing your bot locally. The instructions for the rest of the labs will assume you've downloaded the v4 Emulator (as opposed to the v3 Emulator). Download the emulator by going to [this page](https://github.com/Microsoft/BotFramework-Emulator/releases) and downloading the most recent version of the emulator that has the tag "4.1.0" (select the ".exe" file, if you are using windows).  
+You can download the v4 Bot Framework Emulator for testing your bot locally. The instructions for the rest of the labs will assume you've downloaded the v4 Emulator (as opposed to the v3 Emulator). Download the emulator by going to [this page](https://github.com/Microsoft/BotFramework-Emulator/releases) and downloading the most recent version of the emulator that has the tag "4.3.3" (select the ".exe" file, if you are using windows).  
 
 The emulator installs to `c:\Users\`_your-username_`\AppData\Local\botframework\app-`_version_`\botframework-emulator.exe` or to your Downloads folder, depending on browser.  
 
@@ -22,7 +22,7 @@ The emulator installs to `c:\Users\`_your-username_`\AppData\Local\botframework\
 
 Now that you've downloaded and open the Bot Emulator, the next thing you have to set up is [ngrok, which allows us to connect to bots hosted remotely](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0#configure-ngrok). While most of the testing we'll do is local, you'll need ngrok to access the published version of the bot in the Emulator. There are two main steps to set this up:
 
-1. Download ngrok from this website: <https://ngrok.com/download.> Click "Save as" when you download it so you can control where it gets saved (pick your Documents or Downloads folder, it should default to Downloads). Next, navigate to the install location and unzip the file (right click and select "Extract all...") and extract it one level up from the downloaded file (e.g. to  C:\Users\antho\Downloads\).  
+1. Download ngrok from this website: <https://ngrok.com/download> Click "Save as" when you download it so you can control where it gets saved (pick your Documents or Downloads folder, it should default to Downloads). Next, navigate to the install location and unzip the file (right click and select "Extract all...") and extract it one level up from the downloaded file (e.g. to  C:\Users\antho\Downloads\).  
 2. Open the Bot Framework Emulator and hit the settings button (gear icon in bottom left corner). In the "Path to ngrok" box, hit "Browse," find "ngrok.exe", click "Select ngrok", and then click "Save".
 
 #### Create an Azure Web App Bot
@@ -36,9 +36,7 @@ For pricing tier, select **F0**, as that is all we will need for this workshop. 
 
 When it's deployed, go to the Web App Resource. You have just deployed a very simple EchoBot with the Echo Bot template. If you wish, you can select the "Test in WebChat" tab once it's deployed, and see what it is capable of doing.  
 
-Since this isn't the bot we set out to build, the next thing you need to do is download the source code. We'll edit this throughout the next few labs, and then we'll publish it back to this service.  
-
-Navigate to the "Build" tab within the portal, and select "Download Bot source code". Save it somewhere convenient and extract all the files from the zip file.  
+Typically, this is the starting point for bot development. To save time, we will leave this here for now, and come back to it later. If you are curious and would like to see the code that is available out of the box, you can download the source code by navigating to the "Build" tab within the portal, and select "Download Bot source code". Save it somewhere convenient and extract all the files from the zip file.  
 
 While you've got the Azure portal open, now is also a good time to find and save the `botFilePath` and `botFileSecret` located in **App Service Settings > Application Settings > Application settings** section of your Web App Bot service.
 
@@ -48,20 +46,8 @@ While you've got the Azure portal open, now is also a good time to find and save
 
 ### Lab 1.2: Creating a simple bot and running it
 
-Navigate to the solution file for the Web App Bot you just created, and open it in Visual Studio (in future bots, you can use Visual Studio Code, but for the purposes of these labs, you should use Visual Studio). Spend some time looking at all of the different things you get built in from the Echo Bot template. We won't spend time explaining every single file, but we **highly recommend** spending some time **later** working through and reviewing this sample (and the other Web App Bot sample - Basic Bot), if you have not already. It contains important and useful shells needed for bot development. You can find it and other useful shells and samples [here](https://github.com/Microsoft/BotBuilder-Samples).
-
-Start by right-clicking on the Solution and selecting "Build". This will load up the packages. Next, in the "appsettings.json file, update it to include the following, adding your bot service information as well:
-
-```json
-{
-    "botFilePath": "YourBotFilePath",
-    "botFileSecret": "YourBotFileSecret"
-}
-```
-
-
 #### Creating a Hello World bot
-Most of the time, you will use the template that you have downloaded as a base that you will modify to meet your needs, modifying the project name and the other existing files to be more descriptive of your solution. For the purposes of this lab, we will use an existing project that has all of the files named correctly. 
+Most of the time, you will use the template that you can download from a Web App Bot as a base that you will modify to meet your needs, modifying the project name and the other existing files to be more descriptive of your solution. For the purposes of this lab, we will use an existing project that has all of the files named correctly. 
 
 If you have cloned this Github repo already, you will find Find the project we'll use in the folder \lab02.2-building_bots\resources\code\FinishedPictureBot-Part0. If you are using Github on the web, you can download the folder at https://github.com/InsightDI/LearnAI-Bootcamp/tree/master/lab02.2-building_bots/resources/code/FinishedPictureBot-Part0.  
 
@@ -198,6 +184,8 @@ Since we aren't tracking turns, but we are tracking other things, remove `TurnCo
 ```
 
 Feel free to add some comments explaining the purposes of the strings. Now that you have PictureState appropriately initialized, you can update PictureBotAccessor, to remove the errors you were getting in "Startup.cs".  
+
+**NOTICE!! IMPORTANT PARAGRAPH WITH EMBEDDED INSTRUCTIONS**
 
 Navigate to "PictureBotAccessors.cs" and locate `CounterStateName` and `CounterState`. Using what's provided for CounterState as a template, implement what you need for `PictureStateName` and `PictureState`.  
 
@@ -461,6 +449,7 @@ namespace PictureBot.Responses
     }
 }
 ```
+**NOTICE!! IMPORTANT PARAGRAPH WITH EMBEDDED INSTRUCTIONS**
 
 Note here a whole task is missing. Fill in as you see fit, but make sure the new task has the name "ReplyWithSearchRequest", or you may have issues later.  
 
