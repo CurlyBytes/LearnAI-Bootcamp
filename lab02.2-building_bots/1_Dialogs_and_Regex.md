@@ -38,12 +38,6 @@ When it's deployed, go to the Web App Resource. You have just deployed a very si
 
 Typically, this is the starting point for bot development. To save time, we will leave this here for now, and come back to it later. If you are curious and would like to see the code that is available out of the box, you can download the source code by navigating to the "Build" tab within the portal, and select "Download Bot source code". Save it somewhere convenient and extract all the files from the zip file.  
 
-While you've got the Azure portal open, now is also a good time to find and save the `botFilePath` and `botFileSecret` located in **App Service Settings > Application Settings > Application settings** section of your Web App Bot service.
-
-> For future bot-building ventures, you can either start by creating a bot in the portal and downloading the source code (which is what we're doing here), or you can use the Bot Builder template, and we've provided instructions on how to do that:
->  
->Download the [Bot Builder SDK v4 Template for C# here](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4) and click "Save as" to save it to your Visual Studio ItemTemplates folder  for Visual C#. This is typically located in `C:\Users\`_your-username_`\Documents\Visual Studio 2017\Templates\ItemTemplates\Visual C#`. Navigate to the folder location and double-click on the install and click "Install" to add the template to your Visual Studio templates. Depending on your browser, when you download the template, you can double-click on it and install it directly to Visual Studio Community 2017; that is fine.
-
 ### Lab 1.2: Creating a simple bot and running it
 
 #### Creating a Hello World bot
@@ -70,7 +64,7 @@ To interact with your bot:
 
 * Launch the Bot Framework Emulator (note we are using the v4 Emulator).
 * Select "Open bot" on the Welcome page and navigate to the file ending in ".bot" in the root of your project. You'll be asked to enter your `botSecret`.
-* Now, you should be able to click the message tab (on the left menu) and 'development' listed under "ENDPOINT." You should also see a 'production' endpoint listed, which we'll discuss next.
+* Now, you should be able to click the message tab (on the left menu) and 'development' listed under "ENDPOINT." 
 * You should now be able to converse with the bot.
 * Type "hello", and the bot will respond with "Hello World" to every message.
 * You can select "Start Over" to clear the conversation history.
@@ -81,7 +75,6 @@ In the Log, you should see something similar to the following:
 
 ![ngrok](./resources/assets/ngrok.png)
 
-Note how it says we will bypass ngrok for local addresses. So we're not using ngrok at the moment, but we will if we're connecting to our published version of the bot, which you can access in the 'production' endpoint. Open the 'production' endpoint and observe the differences. This can be a useful feature when you're testing and comparing your development bot to your production bot.
 
 You can read more about using the Emulator [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).  
 > Aside: why this port number?  It is set in your project properties.  In your Solution Explorer, double-click **Properties>Debug** and examine its contents. Does the App URL match what you connected to in the emulator?
