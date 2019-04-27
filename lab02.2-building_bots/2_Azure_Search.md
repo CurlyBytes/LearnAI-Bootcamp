@@ -10,6 +10,8 @@ First, we need to update "SearchDialog" to request a search and process the resp
 
 ![Azure Search NuGet](./resources/assets/AzureSearchNuGet.jpg)
 
+**Important info in this paragraph!!**
+
 Open "PictureBot.cs" and locate `var search_waterfallsteps`. Here is where we'll add the names of the tasks we need to run through this dialog. For PictureBot, we'll have two steps: `SearchRequestAsync` and `SearchAsync`. Add them to the variable `search_waterfallsteps`.  
 
 For `SearchRequestAsync`, you need to check if the user has told us what to search for. You can do this by accessing PictureState to see what `state.Searching` is set to. If the state is "no", then we need to change the state to "yes" and then prompt the user what they want to search for. You can read more about [using the dialog library to gather input here](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-prompts?view=azure-bot-service-4.0&tabs=csharp). Review the following code, then add it below `// Add SearchDialog-related tasks`:
