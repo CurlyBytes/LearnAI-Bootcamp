@@ -2,13 +2,7 @@
 
 Estimated Time: 60-75 minutes
 
-## Important Information - April 2019
 
-This step of the Lab has not been updated since February 1, 2019. Since the recent changes in the Echo-Bot temaplate, the hands-on activities won't work. To move on with this training, please follow the workaround steps below:
-
-1. The theory present in this lab is still relevant. You should read everything, but don't create, download, open, remove, or rename anything.
-1. Using the "Finished Solution", located in the **resources/code/FinishedPictureBot-Part0** folder, start from the [2_Azure_Search](./2_Azure_Search.md) lab. 
-1. Also execute the [LUIS](./3_LUIS.md) lab.
 
 #### Download the Bot Framework Emulator  
 
