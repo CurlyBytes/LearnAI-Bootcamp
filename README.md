@@ -4,12 +4,21 @@
 
 ## Cognitive Services Bootcamp - Build an Intelligent Search Solution for Images using Microsoft AI Platform
 
+## Important Information - May 2019
+
+This training was created, and last updated, with Bot Framework SDK V4.0, Visual Studio 2017, Bot Emulator 4.3, and .Net Framework 4.6. The content is provided “as is". Due to the rapidly changing nature of the many components, including Azure PaaS services, individual labs may break when new versions are used. Be mindful of this as you progress through them, and test the code with newer versions of the mentioned tools, particularly if you’re planning a redelivery. 
+
+**This repo depends upon the community’s input to keep this training current. As you find inconsistencies and bugs, please update the course! Pull Requests are reviewed monthly and credit appropriately attributed.**
+
 ## About this course
 
-In this course, you will focus on hands-on activities that develop proficiency in Azure Cognitive Services including Computer Vision, Custom Vision, LUIS, and Bing Search. You will also learn to leverage other AI-oriented services such as Azure Search and Azure Bot Services. These labs assume an introductory to intermediate knowledge of these services, and, if this is not the case, then you should spend the time working through the prerequisites.
+In this course, you will focus on hands-on activities that develop proficiency in Azure Cognitive Services including Computer Vision, Custom Vision, LUIS, and Bing Search. 
+You will also learn to leverage other AI-oriented services such as Azure Search and Azure Bot Services. 
+These labs assume an introductory to intermediate knowledge of these services, and, if this is not the case, then you should spend the time working through the prerequisites. 
 
-> **!!Important note 09/28/2018!!**: The Microsoft Bot Builder SDK V4 went GA at Ignite this week. The bot labs have been updated to SDK V4, but the SDK V3 labs are located in the resources folder for the bot labs (not being maintained). Additionally, we have moved the logging and testing labs to supplementary exercises (not being maintained at the moment), and the bootcamp will focus on the addition of the Bing Search APIs to bots and other applications.  
-> If you are an instructor redelivering this course and have questions, please email learnAI@microsoft.com.  
+Normally used within Intelligent Bots, as LUIS is, the [Q&A Maker](https://www.qnamaker.ai/) service was released after the creation of this training in 2017, so it is not used. We recommend that you search for information and trainings about it.
+
+This training is two days long, but you can compress the content with [alternative agendas](./alternative-agendas/one-day-deltas.md).
 
 ## Goals
 
@@ -78,21 +87,21 @@ Contact us: learnAI@microsoft.com and <http://aka.ms/LearnAI-GitHub>
 
 ## Certifications
 
-The LearnAI team had intense participation in the creation of the following new Microsoft certifications:
+The LearnAI team had intense participation in the creation of the following new Microsoft certifications and its required tests:
 
-- Azure Data Engineer​
-  - DP-200: Implementing an Azure Data Solution ​
-  - 80% off discount code thru Mar 12, 2019: DP200BigTrips​
-  - DP-201: Designing an Azure Data Solutions​
-  - 80% off discount code thru Mar 12, 2019: DP201Walks​
++ [Azure Data Engineer​](https://www.microsoft.com/en-us/learning/azure-data-engineer.aspx)
+  + DP-200: Implementing an Azure Data Solution
+  + DP-201: Designing an Azure Data Solutions​
 
-- Azure AI Engineer​
-  - AI-100: Designing and Implementing an Azure AI Solution ​
-  - 80% off discount code thru Mar 5, 2019: AI100Goals​
++ [Azure AI Engineer​](https://www.microsoft.com/en-us/learning/azure-ai-engineer.aspx)
+  + AI-100: Designing and Implementing an Azure AI Solution
 
-- Azure Data Scientist ​
-  - DP-100: Designing and Implementing a Data Science Solution on Azure​
-  - 80% off discount code thru Mar 7, 2010: DP100KLS​
++ [Azure Data Scientist](https://www.microsoft.com/en-us/learning/azure-data-scientist.aspx)
+  + DP-100: Designing and Implementing a Data Science Solution on Azure​
+
+## Cognitive Services Compliance
+
+Click [here](https://azure.microsoft.com/en-us/support/legal/cognitive-services-compliance-and-privacy/) to learn how Microsoft Cognitive Services handle your data.
 
 ## Contributing
 

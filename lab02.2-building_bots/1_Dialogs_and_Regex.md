@@ -2,15 +2,13 @@
 
 Estimated Time: 60-75 minutes
 
-## Building a Bot
+## Important Information - April 2019
 
-We assume that you've had some exposure to the Bot Framework. If you have, great. If not, don't worry too much, you'll learn a lot in this section, but you may want to take it slow. We recommend completing [this tutorial](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0) and checking out the [documentation](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
+This step of the Lab has not been updated since February 1, 2019. Since the recent changes in the Echo-Bot temaplate, the hands-on activities won't work. To move on with this training, please follow the workaround steps below:
 
-Regardless of your experience with bots, you should review [this page](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=cs) before starting the lab.
-
-### Lab 1.1: Setting up for bot development
-
-We will be developing a bot using the latest .NET SDK (v4).  To get started, we'll need to download the Bot Framework Emulator, and we'll need to create a Web App Bot and get the source code.  
+1. The theory present in this lab is still relevant. You should read everything, but don't create, download, open, remove, or rename anything.
+1. Using the "Finished Solution", located in the **resources/code/FinishedPictureBot-Part0** folder, start from the [2_Azure_Search](./2_Azure_Search.md) lab. 
+1. Also execute the [LUIS](./3_LUIS.md) lab.
 
 #### Download the Bot Framework Emulator  
 
@@ -18,9 +16,9 @@ You can download the v4 Bot Framework Emulator for testing your bot locally. The
 
 The emulator installs to `c:\Users\`_your-username_`\AppData\Local\botframework\app-`_version_`\botframework-emulator.exe` or to your Downloads folder, depending on browser.  
 
-**If you're using a DSVM, you'll need to run the Emulator as an administrator.**
+We assume that you've had some exposure to the Bot Framework. If you have, great. If not, don't worry too much, you'll learn a lot in this section, but you may want to take it slow. We recommend completing [this tutorial](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0) and checking out the [documentation](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0).
 
-Now that you've downloaded and open the Bot Emulator, the next thing you have to set up is [ngrok, which allows us to connect to bots hosted remotely](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0#configure-ngrok). While most of the testing we'll do is local, you'll need ngrok to access the published version of the bot in the Emulator. There are two main steps to set this up:
+Regardless of your experience with bots, you should review [this page](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=cs) before starting the lab.
 
 1. Download ngrok from this website: <https://ngrok.com/download> Click "Save as" when you download it so you can control where it gets saved (pick your Documents or Downloads folder, it should default to Downloads). Next, navigate to the install location and unzip the file (right click and select "Extract all...") and extract it one level up from the downloaded file (e.g. to  C:\Users\antho\Downloads\).  
 2. Open the Bot Framework Emulator and hit the settings button (gear icon in bottom left corner). In the "Path to ngrok" box, hit "Browse," find "ngrok.exe", click "Select ngrok", and then click "Save".
