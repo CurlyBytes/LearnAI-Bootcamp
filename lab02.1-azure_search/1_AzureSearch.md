@@ -45,11 +45,9 @@ Within the Azure Search blade you just created, click **Import Data**. In the dr
 
 ![Cosmos 1](./resources/assets/cosmos-1.png)
 
-The following screen will appear. Enter a name for the data source. Any name is fine. In the **Cosmos DB** account field, enter the following connection string. Then, select **images** as the database and **metadata** as the collection. 
+The following screen will appear. Enter a name for the data source. Any name is fine. In the **Cosmos DB** account field, enter the connection string provided by the instructor. Then, select **images** as the database and **metadata** as the collection. 
 
-```
-AccountEndpoint=https://gab-ral-shareddb.documents.azure.com:443/;AccountKey=O6UNlM7n5LcLxU3hiVaMF0V04fsDEOk0uDuElh2xyIpAR2MVNpV20ro2T1p9ZRUuiFkdSlg32Xzn0PdJwz3GlA==;
-```
+
 
 ![Cosmos 2](./resources/assets/cosmos-2.png)
 
